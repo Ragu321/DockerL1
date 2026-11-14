@@ -2,12 +2,11 @@ FROM python:3.12
 
 WORKDIR /app
 
-COPY requirements.txt .
-RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
+
+COPY requirements.txt .
 
 COPY app.py .
 
-EXPOSE 5000
+CMD ["python", "app.py"]
 
-CMD ["Python", "app.py"]
