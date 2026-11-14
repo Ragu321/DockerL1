@@ -8,8 +8,8 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 COPY app.py .
-COPY --chown appuser:appuser app.py . 
-COPY --chown appuser:appuser  requirements.txt . 
+COPY --chmod appuser:appuser app.py . 
+COPY --chmod appuser:appuser  requirements.txt . 
 
 USER appuser
 
