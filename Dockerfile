@@ -5,6 +5,7 @@ WORKDIR /app
 RUN useradd -m appuser
 
 USER appuser
+RUN chmod 777:appuser ./requirements.txt 
 
 COPY requirements.txt .
 
