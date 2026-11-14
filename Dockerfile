@@ -1,7 +1,7 @@
 FROM python:3.12
 
 WORKDIR /app
-RUN CHMOD 777 requirements.txt
+RUN chmod 777 requirements.txt
 
 RUN pip install -r requirements.txt
 
