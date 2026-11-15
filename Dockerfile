@@ -1,7 +1,9 @@
 FROM python:3.12
 
 WORKDIR /app
-
+RUN apt-get update -y && \
+   apt-get install  curl -y && \ 
+   rm -rf /var/lib/apt/lists/*
 RUN curl --version
 
 COPY requirements.txt .
