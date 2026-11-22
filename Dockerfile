@@ -1,6 +1,8 @@
 FROM python:3.12
 WORKDIR /app
-RUN useradd -m appuser
+RUN groupadd developer && \
+  useradd -m appuser && \
+  usermod -aG developer  appuser
 COPY . . 
 USER appuser 
 COPY --chown=appuser:appuser app.py  . 
