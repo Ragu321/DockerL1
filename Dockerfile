@@ -1,6 +1,6 @@
 FROM python:3.12
 WORKDIR /app
-RUN useradd -AG appuser
+RUN useradd -m appuser
 COPY . . 
 USER appuser 
 COPY --chown=appuser:appuser app.py  . 
