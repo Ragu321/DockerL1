@@ -12,7 +12,7 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt 
 COPY --chown=appuser:appuser  .  . 
 RUN mkdir -p app/log && \
-    --chown appuser:appuser /app/log . && \
+    chown appuser:appuser /app/log  && \
     chmod 755 app/log
 USER appuser
 EXPOSE 5000
