@@ -1,7 +1,7 @@
 FROM python:3.12-slim
 WORKDIR /app
 RUN apt-get update && \ 
-   app-get install -y curl jq unzip build-essential && \ 
+   apt-get install -y curl jq unzip build-essential && \ 
    rm -rf /var/lib/apt/lists/*
 RUN groupadd developer && \
   useradd -m appuser && \
